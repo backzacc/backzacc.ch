@@ -28,5 +28,7 @@ fwrite($fp, $savestring);
 fclose($fp);
 $lines = array_slice(file('weather.txt'), -3);
 echo $lines[0];
+echo "<br>";
 echo $lines[1];
+echo "<br>";
 echo $lines[2];
