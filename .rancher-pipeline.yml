@@ -1,8 +1,13 @@
-﻿stages:
+stages:
 - name: create file
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: myreg/backzacc-ch:latest
+      registry: 127.0.0.1:34724
+- name: test
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
 timeout: 60
