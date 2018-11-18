@@ -1,0 +1,8 @@
+﻿stages:
+- name: create file
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: myreg/backzacc-ch:latest
+timeout: 60
